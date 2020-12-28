@@ -1,0 +1,2 @@
+TeamsController < ApplicationController 
+end
