@@ -1,11 +1,13 @@
 <h1><%= @team.name %></h1>
     <ul>
-    <li> @team.point_guard </li>
-    <li> @team.shooting_guard </li>
-    <li> @team.small_forward </li>
-    <li> @team.power_forward </li>
-    <li> @team.center </li>
-    <li> @team.coach </li>
+    <li> PG -  <%= @team.point_guard %></li>
+    <li> SG - <%= @team.shooting_guard %></li>
+    <li> SF - <%= @team.small_forward %></li>
+    <li> PF - <%= @team.power_forward %></li>
+    <li> C - <%= @team.center %></li>
+    <br>
+    <br>
+    <li> Coach: <%= @team.coach %></li>
     </ul>
 
 
