@@ -12,4 +12,9 @@ class TeamsController < ApplicationController
         @team = Team.find_by(id: params[:id])
         erb :"teams/show"
     end
+
+    post  '/teams' do 
+        team = Team.create(params)
+        redirect "/teams"
+    end
 end
