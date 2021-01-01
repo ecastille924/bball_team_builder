@@ -1,7 +1,7 @@
 <h1>Make Changes to <%= @team.name %></h1>
 <form method="POST" action="/teams/<%=@team.id%>/edit">
 <input type="hidden" value="PATCH" name="_method">
-<h3>Team Name: <input type="text" name="name" value="<%@team.name%>"></h3>
+<h3>Team Name: <input type="text" name="name" value="<%=@team.name%>"></h3>
 <ul>
 <li> PG - <input type="text" name="team[point_guard]" value="<%=@team.point_guard%>"></li> 
 <li> SG - <input type="text" name="team[shooting_guard]" value="<%=@team.shooting_guard%>"></li> 
