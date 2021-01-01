@@ -20,6 +20,11 @@ class TeamsController < ApplicationController
         @team = Team.find_by(id: params[:id])
         erb :"teams/show"
     end
+
+    get '/teams/:id/edit' do 
+        @team = Team.find_by(id: params[:id])
+        erb :"teams/edit"
+    end
 end
 
     
