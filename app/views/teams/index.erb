@@ -2,3 +2,5 @@
 <ul><% @teams.each do |team| %>
    <li><a href="teams/<%= team.id %>"> <%= team.name %> </a></li>
     <%end%></ul>
+    <br>
+   <h5> <a href="/teams/new">Create a New Team</a> </h5>

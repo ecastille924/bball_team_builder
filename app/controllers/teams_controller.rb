@@ -28,6 +28,7 @@ class TeamsController < ApplicationController
             erb :"teams/show"
         else 
             redirect "/teams"
+        end
         
         erb :"teams/edit"
     end
