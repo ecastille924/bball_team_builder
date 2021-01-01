@@ -19,6 +19,9 @@
         <%= yield %>
 
       <footer class="branding">
+        <%if logged_in?%>
+        <h4>You are logged in as: <%=current_user.username%></h4>
+        <%end%><br>
         <small>&copy; 2020 <strong>Basketball Team Builder</strong></small>
       </footer>
     </div>
