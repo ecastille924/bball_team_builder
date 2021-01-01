@@ -11,5 +11,6 @@ class UsersController < ApplicationController
             else 
                 @errors = user.errors.full_messages.join(" - ")
                 erb :"users/new"
+            end
     end
 end
