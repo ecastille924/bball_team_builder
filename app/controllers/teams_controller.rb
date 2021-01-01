@@ -1,14 +1,13 @@
 class TeamsController < ApplicationController 
     
     get '/teams/new' do 
-
         erb :"teams/new"
     end
 
     post  '/teams' do 
         team = Team.create(params)
         #binding.pry
-        redirect "/teams"
+        redirect "/teams/index"
     end
     
     get '/teams' do 
