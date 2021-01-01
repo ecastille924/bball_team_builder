@@ -31,6 +31,12 @@ class TeamsController < ApplicationController
         @team.update(params[:team])
         redirect "/teams/#{@team.id}"
     end
+
+    delete '/teams/:id' do 
+        @team = Team.find_by(id: params[:id])
+        @team.destroy
+        redirect "/teams"
+    end
 end
 
     
