@@ -21,8 +21,15 @@ class TeamsController < ApplicationController
     end
 
     get '/teams/:id/edit' do 
+        #binding.pry
         @team = Team.find_by(id: params[:id])
         erb :"teams/edit"
+    end
+
+    patch '/teams/:id/edit' do 
+        @team = Team.find_by(id: params[:id])
+        @team.update(params[:team])
+        redirect "/teams/#{@team.id}"
     end
 end
 
