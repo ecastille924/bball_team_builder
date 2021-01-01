@@ -5,7 +5,7 @@ class TeamsController < ApplicationController
     end
 
     post  '/teams' do 
-        team = Team.create(params)
+        team = current_user.teams.create[params]
         #binding.pry
         redirect "/teams/index"
     end
@@ -23,6 +23,12 @@ class TeamsController < ApplicationController
     get '/teams/:id/edit' do 
         #binding.pry
         @team = Team.find_by(id: params[:id])
+        
+        if @team
+            erb :"teams/show"
+        else 
+            redirect "/teams"
+        
         erb :"teams/edit"
     end
 
