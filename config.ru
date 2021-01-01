@@ -7,3 +7,4 @@ end
 run ApplicationController
 use TeamsController 
 use UsersController
+use Rack::MethodOverride 
