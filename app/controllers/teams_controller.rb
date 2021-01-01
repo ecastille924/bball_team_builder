@@ -23,14 +23,11 @@ class TeamsController < ApplicationController
     get '/teams/:id/edit' do 
         #binding.pry
         @team = Team.find_by(id: params[:id])
-        
-        if @team
-            erb :"teams/show"
-        else 
+        if @team.user == current_user 
+            erb :"teams/edit"
+        else
             redirect "/teams"
         end
-        
-        erb :"teams/edit"
     end
 
     patch '/teams/:id/edit' do 
@@ -41,8 +38,12 @@ class TeamsController < ApplicationController
 
     delete '/teams/:id' do 
         @team = Team.find_by(id: params[:id])
-        @team.destroy
+       if @team.user == current_user
+            @team.destroy
+            redirect "/teams"
+       else
         redirect "/teams"
+       end
     end
 end
 
