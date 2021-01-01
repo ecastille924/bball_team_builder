@@ -5,9 +5,9 @@ class TeamsController < ApplicationController
     end
 
     post  '/teams' do 
-        team = current_user.teams.create[params]
+        team = current_user.teams.create(params)
         #binding.pry
-        redirect "/teams/index"
+        redirect "/teams"
     end
     
     get '/teams' do 
