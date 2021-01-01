@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201228223124) do
+ActiveRecord::Schema.define(version: 20210101181532) do
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
@@ -21,6 +21,11 @@ ActiveRecord::Schema.define(version: 20201228223124) do
     t.string "small_forward"
     t.string "power_forward"
     t.string "center"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
   end
 
 end
