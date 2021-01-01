@@ -1,4 +1,4 @@
-<h1>Make Changes to <%= @team.name %></h1>
+<h2>Make Changes to... <h1><%= @team.name %></h1></h2>
 <form method="POST" action="/teams/<%=@team.id%>/edit">
 <input type="hidden" value="PATCH" name="_method">
 <h3>Team Name: <input type="text" name="name" value="<%=@team.name%>"></h3>
