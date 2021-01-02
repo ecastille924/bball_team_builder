@@ -6,8 +6,14 @@ class TeamsController < ApplicationController
 
     post  '/teams' do 
         team = current_user.teams.create(params)
+        if team.invalid?
+            @errors = team.errors.full_messages
+            erb :"teams/new"
+        else
         #binding.pry
         redirect "/teams"
+        end
+        
     end
     
     get '/teams' do 
