@@ -10,6 +10,7 @@
     <li> Coach: <%= @team.coach %></li>
     </ul>
     <br>
+    
     <a href="/teams/<%= @team.id %>/edit">Update Roster for <%= @team.name%></a>
 
     <form method="POST" action="/teams/<%=@team.id%>">
