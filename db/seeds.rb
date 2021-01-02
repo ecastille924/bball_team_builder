@@ -1,3 +1,7 @@
-Team.create(name: "Brooklyn Nets", coach: "Steve Nash", point_guard: "Spencer Dinwiddie", shooting_guard: "Kyrie Irving", small_forward: "Joe Harris", power_forward: "Kevin Durant", center: "DeAndre Jordan")
-Team.create(name: "New York Knciks", coach: "Tom Thibodeau", point_guard: "Elfrid Payton", shooting_guard: "Reggie Bullock", small_forward: "RJ Barrett", power_forward: "Julius Randle", center: "Mitchell Robinson")
-Team.create(name: "Chicago Bulls", coach: "Billy Donnivan", point_guard: "Coby White", shooting_guard: "Zach Lavine", small_forward: "Patrick Williams", power_forward: "Thaddeus Young", center: "Wendell Carter, Jr.")
+#Team.create(name: "Brooklyn Nets", coach: "Steve Nash", point_guard: "Spencer Dinwiddie", shooting_guard: "Kyrie Irving", small_forward: "Joe Harris", power_forward: "Kevin Durant", center: "DeAndre Jordan")
+#Team.create(name: "New York Knciks", coach: "Tom Thibodeau", point_guard: "Elfrid Payton", shooting_guard: "Reggie Bullock", small_forward: "RJ Barrett", power_forward: "Julius Randle", center: "Mitchell Robinson")
+#Team.create(name: "Chicago Bulls", coach: "Billy Donnivan", point_guard: "Coby White", shooting_guard: "Zach Lavine", small_forward: "Patrick Williams", power_forward: "Thaddeus Young", center: "Wendell Carter, Jr.")
+
+Team.create(name: "Los Angeles Lakers", coach: "Frank Vogel", point_guard: "Dennis Schroder", shooting_guard: "Kentavious Caldwell-Pope", small_forward: "Lebron James", power_forward: "Anthony Davis", center: "Marc Gasol")
+Team.create(name: "Los Angeles Clippers", coach: "Tyronn Lue", point_guard: "Patrick Beverly", shooting_guard: "Paul George", small_forward: "Kawhi Leonard", power_forward: "Marcus Morris Sr.", center: "Serge Ibaka")
+Team.create(name: "Denver Nuggets", coach:"Michael Malone", point_guard: "Jamal Murray", shooting_guard: "Gary Harris", small_forward: "Michael Porter Jr.", power_forward: "Paul Milsap", center: "Nikola Jokic")
