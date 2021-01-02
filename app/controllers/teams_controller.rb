@@ -32,8 +32,13 @@ class TeamsController < ApplicationController
 
     patch '/teams/:id/edit' do 
         @team = Team.find_by(id: params[:id])
-        @team.update(params[:team])
-        redirect "/teams/#{@team.id}"
+        if @team.user == current_user 
+            @team.update(params[:team])
+            redirect "/teams/#{@team.id}"
+        else
+            redirect "/teams"
+        end
+
     end
 
     delete '/teams/:id' do 
