@@ -6,13 +6,11 @@
     <li> PF - <%= @team.power_forward %></li>
     <li> C - <%= @team.center %></li>
     <br>
+    <li> Coach: <%= @team.coach %></li></ul>
     <br>
-    <li> Coach: <%= @team.coach %></li>
-    </ul>
-    <br>
-    
     <a href="/teams/<%= @team.id %>/edit">Update Roster for <%= @team.name%></a>
-
+    <br>
+    <br>
     <form method="POST" action="/teams/<%=@team.id%>">
         <input type="hidden" value="DELETE" name="_method">
         <input type="submit" value="Delete Team">
